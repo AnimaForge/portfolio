@@ -6,12 +6,15 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #e9ecef; /* A calm, light grey background */
+    background-color: #e9ecef;
+    /* A calm, light grey background */
     color: #333;
 }
 
 /* remove background from main content containers to let the sections handle it */
-header, main, footer {
+header,
+main,
+footer {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -37,7 +40,8 @@ header, main, footer {
 #hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #a7c7d7; /* color accent to make name more visible */
+    color: #a7c7d7;
+    /* color accent to make name more visible */
 }
 
 #hero p {
@@ -47,15 +51,19 @@ header, main, footer {
 
 /* styling for content sections */
 section {
-    background: #ffffff; /* set to solid white */
+    background: #ffffff;
+    /* set to solid white */
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* subtle shadow for depth */
 }
 
 /* headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #333;
 }
 
@@ -106,7 +114,7 @@ nav a:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .project-card img {
@@ -187,7 +195,10 @@ form label {
     font-weight: bold;
 }
 
-form input, form select, form textarea, form button {
+form input,
+form select,
+form textarea,
+form button {
     padding: 12px;
     margin-top: 5px;
     border-radius: 5px;
