@@ -1,0 +1,244 @@
+/* Mobile First */
+
+/* reset and base font */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* A calm, light grey background */
+    color: #333;
+}
+
+/* remove background from main content containers to let the sections handle it */
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* hero section with my handsome face */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('profilbild.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #a7c7d7; /* color accent to make name more visible */
+}
+
+#hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* styling for content sections */
+section {
+    background: #ffffff; /* set to solid white */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* subtle shadow for depth */
+}
+
+/* headings */
+h1, h2, h3 {
+    color: #333;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+/* project grid section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    margin-top: 0;
+}
+
+.project-content p {
+    flex-grow: 1;
+}
+
+.project-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #495057;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* aside quick facts styling */
+aside p {
+    margin: 5px 0;
+}
+
+/* socials */
+.socials {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.socials h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #343a40;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    color: #a7c7d7;
+    transform: scale(1.1);
+}
+
+.social-links svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea, form button {
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+form button {
+    background-color: #495057;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #343a40;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* media for larger screens */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+
+    #about-me {
+        flex: 2;
+    }
+
+    .sidebar-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
